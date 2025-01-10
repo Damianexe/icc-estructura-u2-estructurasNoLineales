@@ -5,6 +5,7 @@ public class Node {
     private int value;
     private Node left;
     private Node right;
+
     
     public Node(int value) {
         this.value = value;
@@ -30,8 +31,6 @@ public class Node {
         this.right = right;
     }
 
-    
-   
     @Override
     public String toString() {
         return "Node [value=" + value + ", left=" + left + ", right=" + right + "]";
