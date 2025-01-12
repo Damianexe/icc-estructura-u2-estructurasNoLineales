@@ -1,13 +1,21 @@
+import main.Ejercicio_03_listLevels.ListLevels;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Controllers.ArbolRecorridos;
 
 public class App {
-    public static void main(String[] args) {
-        // System.out.println("Hello, World!");
+    public static void main(String[] args) throws Exception {
+        // Llamada a la función que realiza la prueba con el ejercicio 3 y la funcion que realiza los recorridos
         // runArbolBinario();
         runEjercicio3();
     }
 
+    /**
+     * Método que ejemplifica el uso del árbol binario:
+     * 1. Crea una instancia de ArbolBinario.
+     * 2. Inserta un conjunto de valores en el árbol.
+     * 3. Imprime el árbol resultante de manera visual.
+     * 4. Imprime la lista de niveles del árbol.
+     */
     private static void runEjercicio3() {
         // Crear una instancia del árbol binario
         ArbolBinario arbolBinario = new ArbolBinario();
@@ -27,22 +35,22 @@ public class App {
         } else {
             System.out.println("El árbol está vacío.");
         }
-    }
-    
-        public static void runArbolBinario() {
-        ArbolBinario arbolBinario = new ArbolBinario();
-        int[] values = { 40, 20, 60, 10, 30, 50, 70, 5, 15, 55 };
-        for (int valor : values) {
-            arbolBinario.insert(valor);
-        }
 
-        // Ejecucion recorridos
+        // Separador para mejorar la lectura en la consola
+        System.out.println("\nNiveles del árbol:");
+        
+        // Imprime los niveles del árbol utilizando la clase ListLevels
+        ListLevels.printLevels(arbolBinario);
+
+
+        /*// Ejecucion de los tres tipos de recorridos
         ArbolRecorridos arbolRecorridos = new ArbolRecorridos();
         System.out.println("\nRecorrido PreOrder");
         arbolRecorridos.preOrderRecursivo(arbolBinario.getRoot());
         System.out.println("\nRecorrido InOrder");
         arbolRecorridos.inOrderRecursivo(arbolBinario.getRoot());
         System.out.println("\nRecorrido PostOrder");
-        arbolRecorridos.postOrderRecursivo(arbolBinario.getRoot());
+        arbolRecorridos.postOrderRecursivo(arbolBinario.getRoot());*/
     }
 }
+
