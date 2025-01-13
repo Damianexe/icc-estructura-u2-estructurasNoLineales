@@ -1,4 +1,5 @@
 import main.Ejercicio_03_listLevels.ListLevels;
+import main.Materia.Controllers.ArbolAVL;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Controllers.ArbolRecorridos;
 
@@ -6,9 +7,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         // Llamada a la función que realiza la prueba con el ejercicio 3 y la funcion que realiza los recorridos
         // runArbolBinario();
-        runEjercicio3();
+        runArbolAVL();
+        //runEjercicio3();
     }
-
     /**
      * Método que ejemplifica el uso del árbol binario:
      * 1. Crea una instancia de ArbolBinario.
@@ -52,5 +53,15 @@ public class App {
         System.out.println("\nRecorrido PostOrder");
         arbolRecorridos.postOrderRecursivo(arbolBinario.getRoot());*/
     }
-}
+
+    private static void runArbolAVL(){
+        ArbolAVL arbolAVL = new ArbolAVL();
+        
+        int[] values = {10,20,15,24,9,8,21,23,50,25};
+        
+        for (int valor : values) {
+            arbolAVL.insert(valor);
+        }
+    }
+} 
 
