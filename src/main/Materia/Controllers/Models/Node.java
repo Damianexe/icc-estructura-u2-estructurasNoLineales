@@ -2,9 +2,9 @@ package main.Materia.Controllers.Models;
 
 public class Node {
 
-    private int value;
-    private Node left;
-    private Node right;
+    public int value;
+    public Node left;
+    public Node right;
     private int height;
 
     
@@ -31,19 +31,15 @@ public class Node {
     public void setRight(Node right) {
         this.right = right;
     }
-
-    @Override
-    public String toString() {
-        return "Node [value=" + value + ", left=" + left + ", right=" + right + "]";
-    }
     public int getHeight() {
         return height;
     }
     public void setHeight(int height) {
         this.height = height;
     }
-
-    
-    
+    @Override
+    public String toString() {
+        return "Node [value=" + value + ", left=" + left + ", right=" + right + "]";
+    }
     
 }
